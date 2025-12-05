@@ -1,0 +1,10 @@
+rm *.bin *.asc *.json
+yosys
+read_verilog and_port.v
+check
+proc
+synth_ice40 -json and_port.json
+nextpnr-ice40 --hx8k --package ct256 --gui
+icetime -d hx8k -mtr example.rpt example.asc
+icepack and_port.asc and_port.bin
+scp and_port.bin mirko@10.42.0.68:/home/mirko/FPGA

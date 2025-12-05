@@ -1,0 +1,4 @@
+yosys -p 'synth_ice40 -top top -blif and_port.json -json and_port.json' and_port.v
+nextpnr-ice40 --hx8k --package ct256 --json and_port.json --asc and_port.asc --pcf ice40hx8k-evb.pcf
+icepack and_port.asc and_port.bin
+scp and_port.bin mirko@10.42.0.68:/home/mirko/FPGA

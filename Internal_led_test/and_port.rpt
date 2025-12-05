@@ -1,0 +1,25 @@
+
+icetime topological timing analysis report
+==========================================
+
+Info: max_span_hack is enabled: estimate is conservative.
+
+Report for critical path:
+-------------------------
+
+        pre_io_0_16_1 (PRE_IO) [clk] -> DIN0: 0.240 ns
+     0.240 ns net_1748 (CLK$SB_IO_IN)
+        odrv_0_16_1748_1399 (Odrv4) I -> O: 0.372 ns
+        t4 (LocalMux) I -> O: 0.330 ns
+        t3 (IoInMux) I -> O: 0.260 ns
+        t2 (ICE_GB) USERSIGNALTOGLOBALBUFFER -> GLOBALBUFFEROUTPUT: 0.617 ns
+        t1 (gio2CtrlBuf) I -> O: 0.000 ns
+        t0 (GlobalMux) I -> O: 0.154 ns
+     1.973 ns seg_27_1_glb_netwk_6_7
+
+Resolvable net names on path:
+     0.240 ns ..  0.612 ns CLK$SB_IO_IN
+
+Total number of logic levels: 1
+Total path delay: 1.97 ns (506.95 MHz)
+
